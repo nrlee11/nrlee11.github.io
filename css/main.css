@@ -260,18 +260,6 @@ section {
 }
 /* ---------------WORK-------------------- */
 
-.clone2 .mockup {
-  background: url(../img/mockup1.png) no-repeat;
-  background-size: contain;
-}
-.clone3 .mockup {
-  background: url(../img/mockup3.png) no-repeat;
-  background-size: contain;
-}
-.clone4 .mockup {
-  background: url(../img/mockup3.png) no-repeat;
-  background-size: contain;
-}
 /* ------------DESIGN, REACT 공통--------------------- */
 .design .inner,
 .react .inner {
@@ -427,9 +415,6 @@ section {
 }
 /* ------------REACT--------------------- */
 
-.react_container {
-  background: yellow;
-}
 .react_container .contents {
   display: none;
   gap: 50px;
