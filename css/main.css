@@ -1,0 +1,506 @@
+@charset 'utf-8';
+
+/* ---------scroll-out---div.page마다------------ */
+[data-scroll] {
+  transition: opacity 3s;
+}
+[data-scroll="in"] {
+  opacity: 1;
+}
+[data-scroll="out"] {
+  opacity: 0;
+}
+/* ----------- 공통 ------------- */
+:root {
+  --mainColor: #089b66;
+  --subColor: #ce75f8;
+}
+body {
+  font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum,
+    "돋움", "AppleSDGothicNeo", sans-serif;
+  background: #faf5e8;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  margin: 40px 150px;
+}
+h2 {
+  font-family: "Inika";
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--mainColor);
+  text-align: center;
+  margin: 50px 0 80px;
+}
+h3 {
+  font-family: "Inika";
+  font-size: 140px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+h4 {
+  font-family: "Inika";
+  color: var(--subColor);
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+section {
+  padding-top: 50px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.background_box {
+  display: flex;
+  width: 100%;
+  height: 55vh;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+.greenbox {
+  background: var(--mainColor);
+  width: 50%;
+}
+.pinkbox {
+  background: var(--subColor);
+  width: 50%;
+}
+.side_nav {
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  color: var(--mainColor);
+  transform: translateY(-50%);
+  gap: 50px;
+  list-style: none;
+  z-index: 999;
+}
+.side_nav li {
+  opacity: 0.7;
+}
+.side_nav li.on {
+  opacity: 1;
+  font-weight: bold;
+}
+.side_nav li span {
+  position: absolute;
+  right: 24px;
+  transform: translateY(-20%);
+}
+.side_nav li a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 50%;
+  background: var(--mainColor);
+}
+.side_nav li a::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 60px;
+  background: var(--mainColor);
+  /* position: absolute; left: 50%; top: 50%;
+  transform: translateX(-50%); */
+  margin: auto;
+}
+/* ------------------HOME------------------------ */
+.home h2 {
+  font-size: 80px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home h2 strong {
+  color: var(--subColor);
+}
+/* -------------------ABOUT------------------------ */
+.about .inner {
+  margin-top: 100px;
+  display: flex;
+  gap: 100px;
+}
+.about .pic {
+  background: url(../img/profile.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+.about_container {
+  margin-right: 50px;
+  width: 1000px;
+  height: 550px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: 1fr 1fr;
+}
+.about .box1 span {
+  width: 70px;
+}
+.about p {
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.about p span {
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* -----------------SKILLS------------------------ */
+.skills .skill_container {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 100px;
+  column-gap: 130px;
+  box-sizing: border-box;
+}
+.skill_container .skill_item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.skill_container .skill_item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40px;
+}
+.skill_container .skill_item p {
+  font-size: 18px;
+  line-height: 1.5;
+  height: 30%;
+  color: #555;
+}
+/*------------ PROJECT, WORK-공통-------------  */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.descrip {
+  margin-left: 100px;
+  width: 45%;
+  height: 500px;
+}
+/* span 명 수정 */
+.renewal p,
+.clone p {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.renewal p span,
+.clone p span {
+  font-weight: normal;
+  width: 75%;
+}
+.button_box {
+  display: flex;
+  margin-top: 100px;
+}
+.code_view {
+  display: inline-block;
+  background: var(--mainColor);
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  width: 200px;
+  border-radius: 15px;
+  padding: 15px;
+  margin-right: 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.final_view {
+  display: inline-block;
+  background: var(--subColor);
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  width: 200px;
+  border-radius: 15px;
+  padding: 15px;
+  margin-right: 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.mockup {
+  width: 45%;
+  height: 100%;
+  margin-right: 40px;
+}
+/* ---------------PROJECT-------------------- */
+.renewal .mockup img {
+  width: 100%;
+}
+.clone .mockup img {
+  width: 100%;
+}
+/* ---------------WORK-------------------- */
+
+.clone2 .mockup {
+  background: url(../img/mockup1.png) no-repeat;
+  background-size: contain;
+}
+.clone3 .mockup {
+  background: url(../img/mockup3.png) no-repeat;
+  background-size: contain;
+}
+.clone4 .mockup {
+  background: url(../img/mockup3.png) no-repeat;
+  background-size: contain;
+}
+/* ------------DESIGN, REACT 공통--------------------- */
+.design .inner,
+.react .inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.design h2,
+.react h2 {
+  margin-bottom: 40px;
+}
+.design p,
+.react p {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.8;
+}
+.design p span,
+.react p span {
+  font-weight: normal;
+  width: 75%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 50px;
+}
+.tabs li {
+  color: #666;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  position: relative;
+}
+.tabs li.on::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--mainColor);
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+}
+.tabs li.on {
+  color: #037923;
+  font-weight: 700;
+}
+/* ------------DESIGN------------------------- */
+.design_container {
+}
+.design_container .contents {
+  display: none;
+  height: 550px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+}
+.design_container .contents.card {
+  display: flex;
+  flex-flow: column;
+  border: 4px solid #167809;
+  justify-content: center;
+  overflow: hidden;
+}
+.card_slide_box {
+  border: 3px solid #e715af;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.contents.card button {
+  width: 500px;
+  font-size: 30px;
+}
+.design_container ul {
+  border: 5px solid rgb(213, 171, 4);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 50px;
+  align-items: center;
+  justify-content: center;
+  row-gap: 50px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* ul 요소의 위치를 조정하기 위해 position 속성 추가 */
+  transition: top 0.5s ease;
+}
+.design_container li {
+  display: flex;
+  width: 350px;
+  height: 350px;
+  justify-content: center;
+}
+
+.design_container li img {
+  transition: transform 0.5s ease;
+}
+.design_container li img:hover {
+  transform: scale(1.05);
+}
+.design_btn_box {
+  display: flex;
+  justify-content: space-between;
+}
+.design_btn_box button {
+}
+
+/* Modal */
+.modal {
+  display: none; /*Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 500px;
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* ------------REACT--------------------- */
+
+.react_container {
+  background: yellow;
+}
+.react_container .contents {
+  display: none;
+  gap: 50px;
+  height: 550px;
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+.react_container .contents.ox {
+  display: flex;
+}
+.react_container .contents .content {
+  width: 40%;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.react_container .contents .mockup {
+  text-align: center;
+  width: 50%;
+}
+.react_container .contents .mockup iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.react_container .contents.ox .mockup iframe {
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+}
+.footer span {
+  font-family: "Inika";
+  color: var(--mainColor);
+  font-size: 30px;
+  font-weight: bold;
+}
+.footer span.email {
+  color: var(--subColor);
+}
+.footer h2 {
+  font-size: 80px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer h2 strong {
+  color: var(--subColor);
+}
+.footer_contact {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer_contact p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.footer h3 {
+  font-size: 140px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
