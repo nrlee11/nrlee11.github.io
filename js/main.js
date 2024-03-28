@@ -62,7 +62,6 @@ var modal = document.getElementById("myModal"); //모달창(검정반투명 창)
 var img = document.getElementById("cd1"); //이미지
 var modalImg = document.getElementById("img01"); //팝업창(커진이미지)
 
-
 function openModal() {
   var modal = document.getElementById("myModal"); // 모달창(검정반투명 창)
   var modalImg = document.getElementById("img01"); // 팝업창(커진이미지)
@@ -89,14 +88,14 @@ window.addEventListener("click", function (event) {
 
 $(document).ready(function () {
   $("#morebtn").click(function () {
-    $(".card_slide_box ul").animate({ top: "-=350px" }, "0.5");
+    $(".card_slide_box ul").animate({ top: "-=400px" }, "fast");
   });
   $("#back").click(function () {
-    // var currentTop = parseInt($(".card_slide_box ul").css('top'))
-    // console.log(currentTop)
-    // if(currentTop > -350 ){
-    //   return
-    // };
-    $(".card_slide_box ul").animate({ top: "+=350px" }, "0.5");
+    var currentTop = parseInt($(".card_slide_box ul").css("top"));
+    console.log(currentTop);
+    if (currentTop >= -30) {
+      return;
+    }
+    $(".card_slide_box ul").animate({ top: "+=400px" }, "fast");
   });
 });
