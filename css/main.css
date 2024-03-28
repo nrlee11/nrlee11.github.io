@@ -129,6 +129,15 @@ section {
 .home h2 strong {
   color: var(--subColor);
 }
+.home p {
+  color: #faf5e8;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 20px;
+}
 /* -------------------ABOUT------------------------ */
 .about .inner {
   margin-top: 100px;
@@ -315,8 +324,6 @@ section {
   font-weight: 700;
 }
 /* ------------DESIGN------------------------- */
-.design_container {
-}
 .design_container .contents {
   display: none;
   height: 550px;
