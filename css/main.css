@@ -434,7 +434,7 @@ width: 500px;
   margin: auto;
   display: block;
   /* width: 50%; */
-  max-height: 500px;
+  max-width: 500px;
   /* max-width: 1000px; */
 }
 /* The Close Button */
