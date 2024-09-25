@@ -412,17 +412,22 @@ section {
 }
 
 
-.contents.poster ul {
+.contents.popup ul {
   display: flex;
   justify-content: center;
 }
+.contents.popup ul li {
+height: 50%;
+
+}
 .contents.banner ul {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
 .contents.banner ul li{
-height: 200px;
-width: 500px;
+max-height: 200px;
+/* height: 200px;
+width: 500px; */
 }
 
 

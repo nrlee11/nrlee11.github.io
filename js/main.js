@@ -92,7 +92,7 @@ window.addEventListener("click", function (event) {
 // 팝업창제외한 어디든 누르면 닫힘
 
 
-//---------------이벤트페이지는 길이가 길어서 팝업창 따로만듬-------------------
+//---------------이벤트페이지,팝업은 길이가 길어서 팝업창 따로만듬-------------------
 var modal2 = document.getElementById("myModal2"); //모달창(검정반투명 창)
 var img2 = document.getElementById("cd2"); //이미지
 var modalImg2 = document.getElementById("img02"); //팝업창(커진이미지)
