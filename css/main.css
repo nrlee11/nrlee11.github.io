@@ -12,32 +12,33 @@
 }
 /* ----------- 공통 ------------- */
 :root {
-  --mainColor: #089b66;
-  --subColor: #ce75f8;
+  --mainColor: #7f00f6;
+  --subColor: #070091;
 }
 body {
   font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum,
-    "돋움", "AppleSDGothicNeo", sans-serif;
-  background: #faf5e8;
+    "돋움", "AppleSDGothicNeo", sans-serif, ;
+  background: #f5fedb;
 }
 
 .inner {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   margin: 40px 150px;
 }
 h2 {
-  font-family: "Inika";
-  font-size: 40px;
+  font-family:'Crayon Libre';
+  font-size: 50px;
   font-weight: bold;
   color: var(--mainColor);
   text-align: center;
   margin: 50px 0 80px;
 }
 h3 {
-  font-family: "Inika";
-  font-size: 140px;
-  color: #fff;
+  font-family: "Crayon Libre";
+  font-size: 100px;
+  line-height: 1.2;
+  color:  #f5fedb;;
   text-align: center;
   font-weight: bold;
   position: absolute;
@@ -47,10 +48,10 @@ h3 {
   z-index: 1;
 }
 h4 {
-  font-family: "Inika";
+  /* font-family: "Crayon Libre"; */
   color: var(--subColor);
-  font-size: 25px;
-  font-weight: 900;
+  font-size: 30px;
+  font-weight: 1000;
   margin-bottom: 20px;
 }
 section {
@@ -120,14 +121,20 @@ section {
 }
 /* ------------------HOME------------------------ */
 .home h2 {
-  font-size: 80px;
+  font-size: 100px;
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -80%);
+  line-height: 1.2;
 }
 .home h2 strong {
   color: var(--subColor);
+  font-size: 100px;
+}
+.home h3 strong {
+  font-size: 100px;
+  color:#fff;
 }
 .home p {
   color: #faf5e8;
@@ -142,22 +149,22 @@ section {
 .about .inner {
   margin-top: 100px;
   display: flex;
-  gap: 160px;
+  gap: 110px;
 }
 .about .pic {
   background: url(../img/profile.jpg);
   background-size: cover;
   padding: 5px;
   box-sizing: content-box;
-  width: 300px;
-  height: 350px;
+  width: 250px;
+  height: 300px;
 }
 
 .about_container {
-  width: 1000px;
+  width: 1100px;
   height: 550px;
   display: grid;
-  gap: 10px;
+  gap: 15px;
   grid-template-columns: 1fr 1.2fr;
   grid-template-rows: 1fr 1fr;
 }
@@ -166,7 +173,7 @@ section {
 }
 .about p {
   display: flex;
-  gap: 40px;
+  gap: 25px;
   font-size: 20px;
   line-height: 1.5;
 }
@@ -181,6 +188,10 @@ section {
   display: block;
   width: 100%;
   max-width: 210px;
+}
+
+.about h4 {
+  font-family: 'Crayon Libre';
 }
 /* -----------------SKILLS------------------------ */
 .skills .skill_container {
@@ -329,7 +340,7 @@ section {
   bottom: 0;
 }
 .tabs li.on {
-  color: #037923;
+  color: var(--mainColor);
   font-weight: 700;
 }
 /* ------------DESIGN------------------------- */
@@ -553,7 +564,7 @@ width: 500px; */
   position: relative;
 }
 .footer span {
-  font-family: "Inika";
+  font-family: "Crayon Libre";
   color: var(--mainColor);
   font-size: 30px;
   font-weight: bold;
@@ -584,7 +595,7 @@ width: 500px; */
   font-weight: bold;
 }
 .footer h3 {
-  font-size: 140px;
+  font-size: 100px;
   color: #fff;
   text-align: center;
   font-weight: bold;
