@@ -18,7 +18,7 @@
 body {
   font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum,
     "돋움", "AppleSDGothicNeo", sans-serif, ;
-  background: #f5fedb;
+  background: #f8f5cf;
 }
 
 .inner {
@@ -38,7 +38,7 @@ h3 {
   font-family: "Crayon Libre";
   font-size: 100px;
   line-height: 1.2;
-  color:  #f5fedb;;
+  color:  #f8f5cf;;
   text-align: center;
   font-weight: bold;
   position: absolute;
