@@ -16,8 +16,9 @@
   --subColor: #0b02b4;
 }
 body {
-  font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", Dotum,
-    "돋움", "AppleSDGothicNeo", sans-serif, ;
+  font-family: "Pretendard", "Noto Sans KR",
+  "Malgun Gothic", "맑은 고딕", "Dotum",
+    "돋움", "AppleSDGothicNeo", sans-serif;
   background: #f8f5cf;
 }
 
