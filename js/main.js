@@ -175,7 +175,6 @@ $(document).ready(function () {
         { top: "+=400px" },
         "fast",
         function () {
-          console.log(animating);
           animating = 0;
         }
       );
