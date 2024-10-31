@@ -135,7 +135,7 @@ $(document).ready(function () {
   // var slideWidth = 330;
   // var totalSlides = $(".contents_slide_box ul li").length; // 슬라이드의 총 개수
   // var visibleSlides = Math.floor($(".contents_slide_box").width() / slideWidth); // 한 화면에 보이는 슬라이드 개수
-  // var maxTop = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
+  // var 0 = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
   // var minTop = -(totalSlides / visibleSlides) * slideHeight + slideHeight; // 슬라이드가 더 이상 아래로 내려가지 않도록 최하단 위치
   // 아래로 이동하는 버튼 클릭 이벤트
   $("#morebtn").click(function () {
@@ -166,7 +166,7 @@ $(document).ready(function () {
       var currentTop = parseInt($(".contents_slide_box ul").css("top"));
 
       // 슬라이드가 최상단에 도달했으면 더 이상 이동하지 않음
-      if (currentTop >= maxTop) {
+      if (currentTop >= 0) {
         return;
       }
       animating = 1;
@@ -184,7 +184,7 @@ $(document).ready(function () {
   // var slideWidth = 330;
   // var totalSlides = $(".contents_slide_box ul li").length; // 슬라이드의 총 개수
   // var visibleSlides = Math.floor($(".contents_slide_box").width() / slideWidth); // 한 화면에 보이는 슬라이드 개수
-  // var maxTop = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
+  // var 0 = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
   // var minTop = -(totalSlides / visibleSlides) * slideHeight + slideHeight; // 슬라이드가 더 이상 아래로 내려가지 않도록 최하단 위치
 
   // 아래로 이동하는 버튼 클릭 이벤트
@@ -219,7 +219,7 @@ $(document).ready(function () {
       var currentTop = parseInt($(".event_slide_box ul").css("top"));
 
       // 슬라이드가 최상단에 도달했으면 더 이상 이동하지 않음
-      if (currentTop >= maxTop) {
+      if (currentTop >= 0) {
         return;
       }
       animating = 1;
@@ -264,7 +264,7 @@ $(document).ready(function () {
       var currentTop = parseInt($(".popup_slide_box ul").css("top"));
 
       // 슬라이드가 최상단에 도달했으면 더 이상 이동하지 않음
-      if (currentTop >= maxTop) {
+      if (currentTop >= 0) {
         return;
       }
       animating = 1;
@@ -307,7 +307,7 @@ $(document).ready(function () {
       var currentTop = parseInt($(".banner_slide_box ul").css("top"));
 
       // 슬라이드가 최상단에 도달했으면 더 이상 이동하지 않음
-      if (currentTop >= maxTop) {
+      if (currentTop >= 0) {
         return;
       }
       animating = 1;
