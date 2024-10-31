@@ -18,6 +18,13 @@
     object-fit: cover;
     object-position: left top;
 }
+.footer_contact div {
+    display: flex;
+    align-items: center;
+}
+.home p{
+    display: none;
+}
 /* .design_container li img:hover{
     animation: move 5s forwards .2s;
 
@@ -85,7 +92,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    coulmn-gap: 10px;
+    column-gap: 10px;
     
 }
 
@@ -103,6 +110,7 @@
 }
 
 @media (max-width: 992px) {
+
   .about .pic {
     align-self: center;
   }
@@ -113,30 +121,120 @@
   .skill_container .skill_item {
     width: 48.2%;
   }
+  .mockup{
+    display: none;
+  }
+  .mockup.hide,.react_container .contents .mockup {
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+  .descrip{
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+  .descrip h4{
+    text-align: center;
+  }
+  .button_box {
+    display: flex;
+    margin-top: 30px;
+}
+.renewal p, .clone p{
+    padding-left: 30px;
+}
+.button_box {
+    justify-content: center;
+}
+.react_container .contents{
+    flex-direction: column;
+    height: auto;
+}
+.react_container .contents .mockup iframe{
+    min-height: 315px;
+}
+.react_container .contents.todo .mockup iframe{
+    min-height: 500px;
+}
+.react_container .contents .content{
+    width: 100%;   
+    margin: 0;
+}
 }
 
 @media (max-width: 768px) {
   .skill_container .skill_item {
     width: 100%;
   }
-}
+  .footer_contact{
 
+      display: flex;
+      align-items: center;
+      top: 35%;
+      min-width: 550px;
+      flex-direction: column;
+    }
+    section.home h2, section.home h3, section.home h4,section.home strong {
+        width: 100%;
+        font-size: 60px;
+    }
+    .mockup.hide, .react_container .contents .mockup{
+        padding: 0;
+    }
+}
 @media (max-width: 576px) {
   .side_nav {
     display: none !important;
   }
   .about .inner {
-    margin: 0 15px;
+    /* margin: 0 15px; */
+    margin: 0;
+  }.footer_contact{
+    min-width: 100%;
   }
+  .inner {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 25px;
+}
+.descrip{
+    margin-left: 0;
+}
+.modal-eventpage{
+    width: 100%;
+}
 }
 
 @media (max-width: 480px) {
+    .design_container ul{
+        padding: 0;
+    }
+    .about p {
+ 
+        flex-direction: column;
+    }
+    .design p, .react p,.renewal p, .clone p {
+        padding-left: 0px;
+        flex-direction: column;
+    }
+    .design p, .react p,.renewal p span, .clone p span{
+        width: 100%;
+    }
+
+
 }
 
 @media (max-width: 420px) {
 }
 
 @media (max-width: 376px) {
+    .tabs{
+        gap: 5px;
+    }
 }
 
 @media (min-width: 1200px) {
