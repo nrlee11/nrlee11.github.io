@@ -135,7 +135,7 @@ $(document).ready(function () {
   // var slideWidth = 330;
   // var totalSlides = $(".contents_slide_box ul li").length; // 슬라이드의 총 개수
   // var visibleSlides = Math.floor($(".contents_slide_box").width() / slideWidth); // 한 화면에 보이는 슬라이드 개수
-  // var 0 = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
+  // var maxTop = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
   // var minTop = -(totalSlides / visibleSlides) * slideHeight + slideHeight; // 슬라이드가 더 이상 아래로 내려가지 않도록 최하단 위치
   // 아래로 이동하는 버튼 클릭 이벤트
   $("#morebtn").click(function () {
@@ -184,7 +184,7 @@ $(document).ready(function () {
   // var slideWidth = 330;
   // var totalSlides = $(".contents_slide_box ul li").length; // 슬라이드의 총 개수
   // var visibleSlides = Math.floor($(".contents_slide_box").width() / slideWidth); // 한 화면에 보이는 슬라이드 개수
-  // var 0 = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
+  // var maxTop = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
   // var minTop = -(totalSlides / visibleSlides) * slideHeight + slideHeight; // 슬라이드가 더 이상 아래로 내려가지 않도록 최하단 위치
 
   // 아래로 이동하는 버튼 클릭 이벤트
