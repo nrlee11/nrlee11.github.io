@@ -211,6 +211,7 @@ $(document).ready(function () {
   });
 
   // 위로 이동하는 버튼 클릭 이벤트
+
   $("#back2").click(function () {
     if (animating === 0) {
       animating = 1;
