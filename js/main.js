@@ -132,21 +132,24 @@ function available() {
 }
 $(document).ready(function () {
   var slideHeight = 400; // 각 슬라이드의 높이
-  var slideWidth = 400;
-  var totalSlides = $(".contents_slide_box ul li").length; // 슬라이드의 총 개수
-  var visibleSlides = Math.floor($(".contents_slide_box").width() / slideWidth); // 한 화면에 보이는 슬라이드 개수
-  console.log(visibleSlides);
-  var maxTop = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
-  var minTop = -(totalSlides / visibleSlides) * slideHeight + slideHeight; // 슬라이드가 더 이상 아래로 내려가지 않도록 최하단 위치
-  console.log(minTop);
+  // var slideWidth = 330;
+  // var totalSlides = $(".contents_slide_box ul li").length; // 슬라이드의 총 개수
+  // var visibleSlides = Math.floor($(".contents_slide_box").width() / slideWidth); // 한 화면에 보이는 슬라이드 개수
+  // var maxTop = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
+  // var minTop = -(totalSlides / visibleSlides) * slideHeight + slideHeight; // 슬라이드가 더 이상 아래로 내려가지 않도록 최하단 위치
   // 아래로 이동하는 버튼 클릭 이벤트
   $("#morebtn").click(function () {
     if (animating === 0) {
       var currentTop = parseInt($(".contents_slide_box ul").css("top"));
 
       // 슬라이드가 최하단에 도달했으면 더 이상 이동하지 않음
-      console.log(currentTop);
-      if (currentTop <= minTop) {
+      if (
+        currentTop <=
+        -(
+          Math.floor($(".contents_slide_box ul").height() / slideHeight) *
+          slideHeight
+        )
+      ) {
         return;
       }
 
@@ -178,12 +181,11 @@ $(document).ready(function () {
 //-------------------------------이벤트페이지 슬라이드--------------------------
 $(document).ready(function () {
   var slideHeight = 400; // 각 슬라이드의 높이
-  var totalSlides = $(".contents_slide_box ul li").length; // 슬라이드의 총 개수
-  var visibleSlides = Math.floor(
-    $(".contents_slide_box").height() / slideHeight
-  ); // 한 화면에 보이는 슬라이드 개수
-  var maxTop = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
-  var minTop = -(totalSlides - visibleSlides) * slideHeight; // 슬라이드가 더 이상 아래로 내려가지 않도록 최하단 위치
+  // var slideWidth = 330;
+  // var totalSlides = $(".contents_slide_box ul li").length; // 슬라이드의 총 개수
+  // var visibleSlides = Math.floor($(".contents_slide_box").width() / slideWidth); // 한 화면에 보이는 슬라이드 개수
+  // var maxTop = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
+  // var minTop = -(totalSlides / visibleSlides) * slideHeight + slideHeight; // 슬라이드가 더 이상 아래로 내려가지 않도록 최하단 위치
 
   // 아래로 이동하는 버튼 클릭 이벤트
   $("#morebtn2").click(function () {
@@ -191,7 +193,13 @@ $(document).ready(function () {
       var currentTop = parseInt($(".event_slide_box ul").css("top"));
 
       // 슬라이드가 최하단에 도달했으면 더 이상 이동하지 않음
-      if (currentTop <= minTop) {
+      if (
+        currentTop <=
+        -(
+          Math.floor($(".event_slide_box ul").height() / slideHeight) *
+          slideHeight
+        )
+      ) {
         return;
       }
       animating = 1;
@@ -217,6 +225,94 @@ $(document).ready(function () {
       setTimeout(available, 700);
       // 슬라이드를 아래로 400px 이동
       $(".event_slide_box ul").animate({ top: "+=400px" }, "fast");
+    }
+  });
+});
+//-------------------------------팝업 슬라이드--------------------------
+$(document).ready(function () {
+  var slideHeight = 400; // 각 슬라이드의 높이
+
+  // 아래로 이동하는 버튼 클릭 이벤트
+  $("#morebtn3").click(function () {
+    if (animating === 0) {
+      var currentTop = parseInt($(".popup_slide_box ul").css("top"));
+
+      // 슬라이드가 최하단에 도달했으면 더 이상 이동하지 않음
+      if (
+        currentTop <=
+        -(
+          Math.floor($(".popup_slide_box ul").height() / slideHeight) *
+          slideHeight
+        )
+      ) {
+        return;
+      }
+      animating = 1;
+      setTimeout(available, 700);
+
+      // 슬라이드를 위로 400px 이동
+      $(".popup_slide_box ul").animate({ top: "-=400px" }, "fast");
+    }
+  });
+
+  // 위로 이동하는 버튼 클릭 이벤트
+  $("#back3").click(function () {
+    if (animating === 0) {
+      animating = 1;
+      setTimeout(available, 700);
+      var currentTop = parseInt($(".popup_slide_box ul").css("top"));
+
+      // 슬라이드가 최상단에 도달했으면 더 이상 이동하지 않음
+      if (currentTop >= maxTop) {
+        return;
+      }
+      animating = 1;
+      setTimeout(available, 700);
+      // 슬라이드를 아래로 400px 이동
+      $(".popup_slide_box ul").animate({ top: "+=400px" }, "fast");
+    }
+  });
+});
+//-------------------------------배너 슬라이드--------------------------
+$(document).ready(function () {
+  var slideHeight = 400; // 각 슬라이드의 높이
+  // 아래로 이동하는 버튼 클릭 이벤트
+  $("#morebtn4").click(function () {
+    if (animating === 0) {
+      var currentTop = parseInt($(".banner_slide_box ul").css("top"));
+      // 슬라이드가 최하단에 도달했으면 더 이상 이동하지 않음
+      if (
+        currentTop <=
+        -(
+          Math.floor($(".banner_slide_box ul").height() / slideHeight) *
+          slideHeight
+        )
+      ) {
+        return;
+      }
+      animating = 1;
+      setTimeout(available, 700);
+
+      // 슬라이드를 위로 400px 이동
+      $(".banner_slide_box ul").animate({ top: "-=400px" }, "fast");
+    }
+  });
+
+  // 위로 이동하는 버튼 클릭 이벤트
+  $("#back4").click(function () {
+    if (animating === 0) {
+      animating = 1;
+      setTimeout(available, 700);
+      var currentTop = parseInt($(".banner_slide_box ul").css("top"));
+
+      // 슬라이드가 최상단에 도달했으면 더 이상 이동하지 않음
+      if (currentTop >= maxTop) {
+        return;
+      }
+      animating = 1;
+      setTimeout(available, 700);
+      // 슬라이드를 아래로 400px 이동
+      $(".banner_slide_box ul").animate({ top: "+=400px" }, "fast");
     }
   });
 });
