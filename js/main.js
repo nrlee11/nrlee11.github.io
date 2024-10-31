@@ -133,7 +133,7 @@ $(document).ready(function () {
     var slideHeight = 400; // 각 슬라이드의 높이
     var totalSlides = $(".contents_slide_box ul li").length; // 슬라이드의 총 개수
     var visibleSlides = Math.floor(
-      $(".contents_slide_box").height() / slideHeight
+      $(".contents_slide_box ul").height() / slideHeight
     ); // 한 화면에 보이는 슬라이드 개수
     var maxTop = 0; // 슬라이드가 더 이상 위로 올라가지 않도록 최상단 위치
     var minTop = -(totalSlides - visibleSlides) * slideHeight; // 슬라이드가 더 이상 아래로 내려가지 않도록 최하단 위치
