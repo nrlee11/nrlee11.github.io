@@ -195,10 +195,10 @@ section.home h2, section.home h3, section.home h4, section.home strong {
         font-size: 17px;
     }
     .footer h2{
-        top: 19%;
+        top: 12%;
     }
     .footer_contact{
-        top: 37%;
+        top: 34%;
     }
 }
 @media (max-width: 576px) {
