@@ -23,7 +23,7 @@ body {
 
 .inner {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   margin: 40px 180px;
 }
 h2 {
