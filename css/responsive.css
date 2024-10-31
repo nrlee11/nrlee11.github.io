@@ -166,6 +166,7 @@ section.home h2, section.home h3, section.home h4, section.home strong {
     width: 100%;   
     margin: 0;
 }
+
 }
 
 @media (max-width: 768px) {
@@ -190,6 +191,9 @@ section.home h2, section.home h3, section.home h4, section.home strong {
     .tabs{
         gap: 15px;
     }
+    .tabs li{
+        font-size: 17px;
+    }
 }
 @media (max-width: 576px) {
   .side_nav {
@@ -212,6 +216,15 @@ section.home h2, section.home h3, section.home h4, section.home strong {
 }
 .modal-eventpage{
     width: 100%;
+}
+.tabs{
+    justify-content: space-between;
+}
+.footer h2{
+    top: 19px;
+}
+.footer_contact{
+    top: 37px;
 }
 }
 
@@ -237,11 +250,17 @@ section.home h2, section.home h3, section.home h4, section.home strong {
 }
 
 @media (max-width: 420px) {
+    .tabs li{
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 376px) {
     .tabs{
         gap: 5px;
+    }
+    .tabs li{
+        font-size: 15px;
     }
 }
 
