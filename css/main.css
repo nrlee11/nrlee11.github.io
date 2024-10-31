@@ -357,7 +357,7 @@ section {
   justify-content: center;
   overflow: hidden;
 }
-.contents_slide_box {
+.contents_slide_box,.popup_slide_box,.banner_slide_box {
   height: 400px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -394,6 +394,7 @@ section {
 }
 .design_container li img:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 .design_btn_box {
   display: flex;
@@ -415,7 +416,7 @@ section {
 }
 
 
-.design_container .contents.eventpage {
+.design_container .contents.eventpage,.contents.popup,.contents.banner {
   display: none;
   flex-flow: column;
   justify-content: center;
@@ -428,7 +429,7 @@ section {
   justify-content: center;
 }
 .contents.popup ul li {
-height: 50%;
+/* height: 50%; */
 
 }
 .contents.banner ul {
@@ -436,7 +437,7 @@ height: 50%;
   justify-content: center;
 }
 .contents.banner ul li{
-max-height: 200px;
+/* max-height: 200px; */
 /* height: 200px;
 width: 500px; */
 }
