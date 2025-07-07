@@ -165,7 +165,7 @@ section {
   height: 550px;
   display: grid;
   gap: 15px;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 0.8fr 1.2fr;
   grid-template-rows: 1fr 1fr;
 }
 .about .box1 span {
