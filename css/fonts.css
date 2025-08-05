@@ -14,9 +14,3 @@
 
 /* Crayon Libre */
 @import url('https://fonts.cdnfonts.com/css/crayon-libre');
-
-/* font-display 강제로 적용 */
-@font-face {
-  font-family: 'Crayon Libre';
-  font-display: swap;
-}
